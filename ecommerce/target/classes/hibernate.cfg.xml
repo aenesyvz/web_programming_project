@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Veritabanı bağlantı ayarları -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ecommerce</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">mysql.AEY37</property>
+
+        <!-- Diğer Hibernate ayarları -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        
+        <!-- Tabloları otomatik oluşturma veya güncelleme -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Entity sınıflarının paket yolu -->
+        <mapping class="models.Category"/>
+        <mapping class="models.Product"/>
+        <mapping class="models.User"/>
+       	<mapping class="models.Order"/>
+       	<mapping class="models.OrderItem"/>
+       	<mapping class="models.CartItem"/>
+        <!-- ... -->
+
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+ <section id="home" class="position-relative h-100 w-100 mb-5 p-0 d-flex  z-index-2   flex-column justify-content-center align-items-center" style="  min-height: 100vh;background: url('images/home_bg3.jpg') center center;background-size: cover;">
+        <div class="container text-center text-md-left" data-aos="fade-up">
+            <h2 class="title text-white">Merhaba!</h2>
+            <h1 class="title mb-3 font-weight-bold text-white">Ben Full-Stack Geliştiricisiyim</h1>
+            <h2 class="sub__title mb-5" style="color: rgba(255, 255, 255, 0.8)">Hayalindeki projeyi gerçeğe dönüştürebilmen için birlikte çalışalım!</h2>
+            <button class="mt-5 d-flex justify-content-center btn  rounded-3 border-2 border-white mx-auto outline-none px-4 py-2 shadow-none indexBtn"><a href="#aboutSection" class="text-decoration-none text-white h3">Beni Keşfet</a> </button>
+        </div>
+    </section>
