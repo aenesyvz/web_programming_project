@@ -45,7 +45,7 @@
 
 						</div>
 
-						<h1 class="text-white">View Product</h1>
+						<h1 class="text-white"><a href="AdminProduct.jsp"  class="text-decoration-none">View Product</a> </h1>
 
 					</div>
 

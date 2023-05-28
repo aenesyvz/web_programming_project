@@ -34,6 +34,7 @@ List<Category> categories = categoryManager.fetchAll();
 			</div>
 		</div>
 	</section>
+	
 	<section>
 		<div class="container mt-3 py-3">
 			<table class="table">

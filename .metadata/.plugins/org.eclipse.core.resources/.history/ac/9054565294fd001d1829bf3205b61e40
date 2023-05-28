@@ -1,0 +1,133 @@
+package controllers;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+
+import models.Category;
+import models.Product;
+import repositories.CategoryManager;
+import repositories.ProductManager;
+
+/**
+ * Servlet implementation class AddProductServlet
+ */
+@MultipartConfig(fileSizeThreshold = 1024 * 1024,
+maxFileSize = 1024 * 1024 * 10, 	// 10 MB
+maxRequestSize = 1024 * 1024 * 10)	// 10 MB
+@WebServlet("/AddProductServlet")
+public class AddProductServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public AddProductServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			CategoryManager categoryManager = new CategoryManager();
+			ProductManager productManager = new ProductManager();
+		
+		
+			String productName = request.getParameter("productName");
+			int categoryId = Integer.parseInt(request.getParameter("category"));
+			double productPrice = Double.parseDouble(request.getParameter("productPrice"));
+			int productStock = Integer.parseInt(request.getParameter("productStock"));
+			Part productImagePart = request.getPart("productImage");	
+			
+		
+			
+			int validationResult = checkInputs(productName, categoryId, productPrice, productStock, productImagePart);
+			if(checkInputs(productName, categoryId, productPrice, productStock, productImagePart) == -1) {
+				return;
+			}
+			
+			
+			Category category = categoryManager.fetchById(categoryId);
+			
+			String uploadPath = File.separator + "product" + File.separator + "image.png";
+			
+			if(productImagePart.getSize() != 0 && productImagePart.getSubmittedFileName() != "") {
+				uploadPath = uploadImage(request, productImagePart);
+			}
+			
+			Product product = new Product(category, productName, productPrice, productStock, uploadPath);
+			int result = productManager.save(product);
+			
+			// Redirect
+			
+							
+			response.sendRedirect("admin-product-management.jsp");
+			return;
+			
+		
+	}
+	
+	private int checkInputs( String productName,int categoryId, double productPrice, int productStock, Part productImagePart) throws IOException {
+		if(productName.isEmpty()) {
+			return -1;
+		}
+		
+		if(categoryId < 0) {
+			return -1;
+		}
+		
+		if(productPrice < 0) {
+			return -1;
+		}
+		
+		if(productStock < 0) {
+			return -1;
+		}
+		
+		if(productImagePart.getSize() > 10485760) {
+			return -1;
+		}
+		
+		return 0;
+	}
+	
+	private String uploadImage(HttpServletRequest request, Part imageFile)
+			throws FileNotFoundException, IOException {		
+		String appPath = request.getRealPath("img");
+		String uploadPath = File.separator + "product" + File.separator + java.util.UUID.randomUUID();
+		String fullPath = appPath + uploadPath;
+		
+		FileOutputStream fos = new FileOutputStream(fullPath);
+		
+		InputStream inputStream = imageFile.getInputStream();	
+				
+		byte[] data = new byte[inputStream.available()];
+		
+		inputStream.read(data);
+		fos.write(data);
+		fos.close();
+		
+		return uploadPath;
+	}
+
+}
