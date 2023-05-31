@@ -2,12 +2,16 @@
 <section name="Workbench">
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="mysql_connection_crud_operation"/>
+			<item value="odev6"/>
 			<item value="ecommerce"/>
 			<item value="test4"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="mysql_connection_crud_operation"/>
+			<item value="odev6"/>
 			<item value="ecommerce"/>
 			<item value="test4"/>
 		</list>

@@ -191,7 +191,7 @@ List<Product> products = productManager.fetchAll();
 				 </div>
 				  <div class="form-group mb-3">
 				      			<label class="label" for="productImage">Product Image</label>
-				      			<input type="file" placeholder="Entrying..." id="UproductImage" class="form-control" name="productImage" required />
+				      			<input type="file" placeholder="Entrying..." id="UproductImage" class="form-control" name="productImage" />
 				 </div>
 	        </div>
 

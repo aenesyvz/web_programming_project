@@ -13,7 +13,7 @@ public class ProductManager extends GenericRepositoryManager<Product> {
 		super(Product.class);
 	}
 	
-	public List<Product> fetchAllByCategoryId(int categoryId){
+	public List<Product> getAllByCategoryId(int categoryId){
 		Session session = getSessionFactory().openSession(); 
 		List<Product> returnList = new ArrayList<Product>();
 		
