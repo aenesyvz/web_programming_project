@@ -27,7 +27,7 @@
 
 						</div>
 
-						<h1 class="text-white"><a href="AdminCategory.jsp"  class="text-decoration-none">View Category</a> </h1>
+						<h1 class="text-white"><a href="AdminCategory.jsp"  class="text-decoration-none text-white">View Category</a> </h1>
 						
 					</div>
 
@@ -45,7 +45,7 @@
 
 						</div>
 
-						<h1 class="text-white"><a href="AdminProduct.jsp"  class="text-decoration-none">View Product</a> </h1>
+						<h1 class="text-white"><a href="AdminProduct.jsp"  class="text-decoration-none text-white">View Product</a> </h1>
 
 					</div>
 
@@ -64,7 +64,7 @@
 
 						</div>
 
-						<h1 class="text-white">View Order</h1>
+							<h1 class="text-white"><a href="views/AdminOrder.jsp"  class="text-decoration-none text-white">View Order</a> </h1>
 
 					</div>
 

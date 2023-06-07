@@ -43,8 +43,6 @@ public class RegisterServlet extends HttpServlet {
 		
 		HttpSession httpSession = request.getSession();	
 		
-		// Validations
-		
 		if(username.isEmpty() || password.isEmpty()) {
 		
 			response.sendRedirect("register.jsp");
@@ -53,19 +51,14 @@ public class RegisterServlet extends HttpServlet {
 		
 		User user = new User(username, password, false);
 		UserManager userManager = new UserManager();
-		int result = userManager.save(user);
+		int userId = userManager.save(user);
 		
-		if(result > -1) {
-			
-			User dbUser = userManager.fetchByUsernameAndPassword(username, password);
-			
-			if(dbUser != null && dbUser.getId() == result) {		
-				httpSession.setAttribute("current-user", dbUser);				
-				response.sendRedirect("index.jsp");
-				return;
-			} 
-		} else {
-			httpSession.setAttribute("red-message", "Kullanici zaten mevcut");				
+		if(userId > -1) {
+			User savedUser = userManager.getByUsernameAndPassword(username, password);
+			httpSession.setAttribute("current-user", savedUser);				
+			response.sendRedirect("index.jsp");
+			return;
+		} else {	
 			response.sendRedirect("register.jsp");
 			return;
 		}

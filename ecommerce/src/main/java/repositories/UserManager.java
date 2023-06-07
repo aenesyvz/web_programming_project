@@ -10,12 +10,12 @@ public class UserManager extends GenericRepositoryManager<User> {
 		super(User.class);
 	}
 	
-	public User fetchByUsernameAndPassword(String username, String password){
+	public User getByUsernameAndPassword(String username, String password){
 		Session session = getSessionFactory().openSession(); 
-		User user = null;
+		User user;
 		
 		try {
-			Query<User> query = session.createQuery("FROM User as u WHERE u.username =: username AND u.password =: password");
+			Query<User> query = session.createQuery("From User as item Where item.username =: username And item.password =: password");
 			query.setParameter("username", username);
 			query.setParameter("password", password);
 			user = query.uniqueResult();

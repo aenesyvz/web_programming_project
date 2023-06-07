@@ -34,7 +34,6 @@ public class Product {
 	@Column(name = "image")
 	private String image;
 	
-	// Constructor
 	
 	public Product() {
 	}
@@ -47,7 +46,6 @@ public class Product {
 		this.image = image;
 	}
 	
-	// Getters and Setters	
 
 	public int getId() {
 		return id;

@@ -25,7 +25,7 @@ public class User {
 	@Column(name = "is_admin", nullable = false)
 	private boolean isAdmin;
 	
-	// Constructor
+	
 	
 	public User() {
 	}
@@ -36,7 +36,7 @@ public class User {
 		this.isAdmin = isAdmin;
 	}
 	
-	// Getters and Setters
+	
 
 	public int getId() {
 		return id;

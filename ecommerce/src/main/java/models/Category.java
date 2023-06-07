@@ -19,7 +19,6 @@ public class Category {
 	@Column(name = "name", nullable = false, unique = true)
 	private String name;
 	
-	// Constructor
 	
 	public Category() {
 	}
@@ -28,7 +27,7 @@ public class Category {
 		this.name = name;
 	}
 	
-	// Getters and Setters
+
 
 	public int getId() {
 		return id;

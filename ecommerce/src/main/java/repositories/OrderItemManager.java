@@ -14,18 +14,18 @@ public class OrderItemManager extends GenericRepositoryManager<OrderItem>{
 		super(OrderItem.class);
 	}
 	
-	public List<OrderItem> fetchAllByOrderId(int orderId){
+	public List<OrderItem> getAllByOrderId(int id){
 		Session session = getSessionFactory().openSession(); 
-		List<OrderItem> returnList = new ArrayList<OrderItem>();
+		List<OrderItem> orders = new ArrayList<OrderItem>();
 		
 		try {
-			Query<OrderItem> query = session.createQuery("FROM OrderItem as o WHERE o.order.id =: id");
-			query.setParameter("id", orderId);
-			returnList = query.list();
+			Query<OrderItem> query = session.createQuery("From OrderItem as item Where item.order.id =: id");
+			query.setParameter("id", id);
+			orders = query.list();
 		} finally {
 			session.close();
 		}
 		
-		return returnList;
+		return orders;
 	}
 }

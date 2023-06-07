@@ -65,7 +65,7 @@ public class AddCartServlet extends HttpServlet {
 		Product product = productManager.fetchById(productId);
 		
 		
-		List<CartItem> userCartItems = cartItemManager.fetchAllByUserId(currentUser.getId());
+		List<CartItem> userCartItems = cartItemManager.getAllByUserId(currentUser.getId());
 		
 		
 		CartItem currentCartItem = null;

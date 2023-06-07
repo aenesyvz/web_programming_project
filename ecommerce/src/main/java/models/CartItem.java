@@ -29,7 +29,7 @@ public class CartItem {
 	@Column(name = "quantity", nullable = false)
 	private int quantity;
 	
-	// Constructor
+	
 	
 	public CartItem() {
 	}
@@ -40,8 +40,7 @@ public class CartItem {
 		this.quantity = quantity;
 	}
 	
-	// Getters and Setters	
-
+	
 	public int getId() {
 		return id;
 	}

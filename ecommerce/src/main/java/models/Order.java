@@ -32,7 +32,7 @@ public class Order {
 	@Column(name = "created_at", nullable = false, updatable = false)
 	private Date createdAt;
 	
-	// Constructor
+	
 	
 	public Order() {
 	}
@@ -42,7 +42,7 @@ public class Order {
 		this.total = total;
 	}
 	
-	// Getters and Setters
+	
 	
 	public int getId() {
 		return id;

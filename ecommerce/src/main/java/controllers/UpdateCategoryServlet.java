@@ -42,10 +42,6 @@ public class UpdateCategoryServlet extends HttpServlet {
 		int categoryId = Integer.parseInt(request.getParameter("categoryId"));
 		String categoryName = request.getParameter("categoryName");
 		
-		if(categoryName.isEmpty()) {
-			response.sendRedirect("AdminCategory.jsp");
-			return;
-		}
 		
 		Category category = categoryManager.fetchById(categoryId);
 		

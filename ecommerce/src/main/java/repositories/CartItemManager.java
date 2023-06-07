@@ -12,13 +12,13 @@ public class CartItemManager extends GenericRepositoryManager<CartItem> {
 		super(CartItem.class);
 	}
 	
-	public List<CartItem> fetchAllByUserId(int userId){
+	public List<CartItem> getAllByUserId(int id){
 		Session session = getSessionFactory().openSession(); 
-		List<CartItem> cartItems = null;
+		List<CartItem> cartItems;
 		
 		try {
-			Query<CartItem> query = session.createQuery("FROM CartItem as c WHERE c.user.id =: userid");
-			query.setParameter("userid", userId);
+			Query<CartItem> query = session.createQuery("From CartItem as item Where item.user.id =: id");
+			query.setParameter("id", id);
 			cartItems = query.list();
 		} finally {
 			session.close();

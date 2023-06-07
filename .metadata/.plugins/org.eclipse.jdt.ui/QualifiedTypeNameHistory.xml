@@ -10,10 +10,8 @@
     <fullyQualifiedTypeName name="javax.persistence.criteria.CriteriaBuilder"/>
     <fullyQualifiedTypeName name="org.hibernate.criterion.CriteriaQuery"/>
     <fullyQualifiedTypeName name="org.hibernate.Query"/>
-    <fullyQualifiedTypeName name="models.Order"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
-    <fullyQualifiedTypeName name="models.OrderItem"/>
     <fullyQualifiedTypeName name="repositories.GenericRepositoryManager"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.hibernate.Session"/>
@@ -29,12 +27,16 @@
     <fullyQualifiedTypeName name="dao.UserDAO"/>
     <fullyQualifiedTypeName name="model.User"/>
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
-    <fullyQualifiedTypeName name="repositories.ProductManager"/>
-    <fullyQualifiedTypeName name="repositories.CartItemManager"/>
-    <fullyQualifiedTypeName name="models.User"/>
     <fullyQualifiedTypeName name="models.Product"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="repositories.UserManager"/>
+    <fullyQualifiedTypeName name="repositories.CartItemManager"/>
+    <fullyQualifiedTypeName name="repositories.OrderManager"/>
+    <fullyQualifiedTypeName name="repositories.OrderItemManager"/>
+    <fullyQualifiedTypeName name="repositories.ProductManager"/>
+    <fullyQualifiedTypeName name="models.User"/>
+    <fullyQualifiedTypeName name="models.Order"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="models.CartItem"/>
-    <fullyQualifiedTypeName name="repositories.UserManager"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="models.OrderItem"/>
 </qualifiedTypeNameHistroy>

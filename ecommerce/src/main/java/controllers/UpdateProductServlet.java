@@ -61,9 +61,9 @@ public class UpdateProductServlet extends HttpServlet {
 		
 		
 	
-		if(checkInputs( productName, categoryId, productPrice, productStock, productImage) == -1) {
-			return;
-		}
+//		if(checkInputs( productName, categoryId, productPrice, productStock, productImage) == -1) {
+//			return;
+//		}
 		
 		Product updatedProduct = productManager.fetchById(productId);
 		Category category = categoryManager.fetchById(categoryId);
@@ -92,30 +92,30 @@ public class UpdateProductServlet extends HttpServlet {
 		return;
 	}
 
-	
-	private int checkInputs( String productName,int categoryId, double productPrice, int productStock, Part productImagePart) throws IOException {
-		if(productName.isEmpty()) {
-			return -1;
-		}
-		
-		if(categoryId < 0) {
-			return -1;
-		}
-		
-		if(productPrice < 0) {
-			return -1;
-		}
-		
-		if(productStock < 0) {
-			return -1;
-		}
-		
-		if(productImagePart.getSize() > 10485760) {
-			return -1;
-		}
-		
-		return 0;
-	}
+//	
+//	private int checkInputs( String productName,int categoryId, double productPrice, int productStock, Part productImagePart) throws IOException {
+//		if(productName.isEmpty()) {
+//			return -1;
+//		}
+//		
+//		if(categoryId < 0) {
+//			return -1;
+//		}
+//		
+//		if(productPrice < 0) {
+//			return -1;
+//		}
+//		
+//		if(productStock < 0) {
+//			return -1;
+//		}
+//		
+//		if(productImagePart.getSize() > 10485760) {
+//			return -1;
+//		}
+//		
+//		return 0;
+//	}
 	
 	private String uploadImage(HttpServletRequest request, Part productImagePart)
 			throws FileNotFoundException, IOException {		

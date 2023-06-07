@@ -35,7 +35,7 @@ public class OrderItem {
 	@Column(name = "is_delivered", nullable = false)
 	private boolean delivered;
 	
-	// Constructor
+	
 
 	public OrderItem() {
 	}
@@ -48,7 +48,7 @@ public class OrderItem {
 		this.delivered = delivered;
 	}
 	
-	// Getters and Setters	
+	
 
 	public int getId() {
 		return id;

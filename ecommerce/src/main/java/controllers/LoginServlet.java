@@ -42,27 +42,21 @@ public class LoginServlet extends HttpServlet {
 		
 		HttpSession httpSession = request.getSession();	
 		
-		// Validations
 		
-		if(username.isEmpty() || password.isEmpty()) {
-			httpSession.setAttribute("red-message", "Kullanici adi ve sifre bos olmamalidir");				
+		if(username.isEmpty() || password.isEmpty()) {				
 			response.sendRedirect("login.jsp");
 			return;
 		}
 		
-		// Check user from db
 		
 		UserManager userManager = new UserManager();
-		User dbUser = userManager.fetchByUsernameAndPassword(username, password);			
+		User user = userManager.getByUsernameAndPassword(username, password);			
 		
-		// Redirect			
-				
-		if(dbUser == null) {
-			httpSession.setAttribute("red-message", "Kullanici adi veya sifre hatali");				
+		if(user == null) {			
 			response.sendRedirect("login.jsp");
 			return;
 		} else {
-			httpSession.setAttribute("current-user", dbUser);				
+			httpSession.setAttribute("current-user", user);				
 			response.sendRedirect("index.jsp");
 			return;
 		}
