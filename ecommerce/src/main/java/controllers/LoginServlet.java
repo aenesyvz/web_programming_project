@@ -41,23 +41,21 @@ public class LoginServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		
 		HttpSession httpSession = request.getSession();	
-		
-		
+			
 		if(username.isEmpty() || password.isEmpty()) {				
-			response.sendRedirect("login.jsp");
+			response.sendRedirect("views/login.jsp");
 			return;
 		}
-		
 		
 		UserManager userManager = new UserManager();
 		User user = userManager.getByUsernameAndPassword(username, password);			
 		
 		if(user == null) {			
-			response.sendRedirect("login.jsp");
+			response.sendRedirect("views/login.jsp");
 			return;
 		} else {
 			httpSession.setAttribute("current-user", user);				
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("views/index.jsp");
 			return;
 		}
 	}

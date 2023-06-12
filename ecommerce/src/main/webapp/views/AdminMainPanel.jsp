@@ -10,7 +10,7 @@
         <link href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" rel="stylesheet">
 </head>
 <body>
-		<%@include file="components/navbar.jsp"%>
+		<%@include file="../components/navbar.jsp"%>
 		<section>
 			<div class="container mt-5 py-5">
 					<div class="row mt-3">
@@ -23,7 +23,7 @@
 
 						<div class="container">
 								<img style="width: 200px;height: 200px" class="img-fluid rounded-circle"
-								src="images/bg-1.jpg" alt="user_icon">
+								src="../images/bg-1.jpg" alt="user_icon">
 
 						</div>
 
@@ -41,7 +41,7 @@
 
 						<div class="container">
 								<img style="width: 200px;height: 200px" class="img-fluid rounded-circle"
-								src="images/hero-bg.jpg" alt="user_icon">
+								src="../images/hero-bg.jpg" alt="user_icon">
 
 						</div>
 
@@ -60,11 +60,11 @@
 
 						<div class="container">
 								<img style="width: 200px;height: 200px" class="img-fluid rounded-circle"
-								src="images/order.png" alt="user_icon">
+								src="../images/order.png" alt="user_icon">
 
 						</div>
 
-							<h1 class="text-white"><a href="views/AdminOrder.jsp"  class="text-decoration-none text-white">View Order</a> </h1>
+							<h1 class="text-white"><a href="AdminOrder.jsp"  class="text-decoration-none text-white">View Order</a> </h1>
 
 					</div>
 
@@ -78,7 +78,7 @@
 
 						<div class="container">
 							<img style="width: 200px;height: 200px" class="img-fluid rounded-circle"
-								src="images/customer.png" alt="user_icon">
+								src="../images/customer.png" alt="user_icon">
 
 						</div>
 
@@ -93,7 +93,7 @@
 		</section>
 		
 		
-		<%@include file="components/footer.jsp"%>
+		<%@include file="../components/footer.jsp"%>
 		
 		
 </body>

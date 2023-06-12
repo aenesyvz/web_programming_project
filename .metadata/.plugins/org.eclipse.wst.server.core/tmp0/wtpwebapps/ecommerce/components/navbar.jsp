@@ -11,7 +11,7 @@ User currentUser = (User) session.getAttribute("current-user");
                 <h2 class="me-auto my-auto">AEY37</h2>
                 <div class="col-md-5">
                     <ul class=" d-flex justify-content-around list-unstyled my-auto ">
-                        <li class=""><a class="text-decoration-none text-dark btn " href="index.html">Home</a></li>
+                        <li class=""><a class="text-decoration-none text-dark btn " href="index.jsp">Home</a></li>
                         
                	<%
 				if (currentUser != null && currentUser.isAdmin()) {
@@ -31,7 +31,7 @@ User currentUser = (User) session.getAttribute("current-user");
 				} else {
 				%>
 				<li><a class="text-decoration-none text-dark btn "
-						href="LogOutServlet">Log Out</span>
+						href="../LogOutServlet">Log Out</span>
 					</a></li>
 				<%
 								CartItemManager cartItemManager = new CartItemManager();

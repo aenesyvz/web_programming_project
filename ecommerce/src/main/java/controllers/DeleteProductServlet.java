@@ -41,7 +41,7 @@ public class DeleteProductServlet extends HttpServlet {
 		int productId = Integer.parseInt(request.getParameter("productId"));
 		productManager.deleteById(productId);
 		
-		response.sendRedirect("AdminProduct.jsp");
+		response.sendRedirect("views/AdminProduct.jsp");
 		return;
 	}
 

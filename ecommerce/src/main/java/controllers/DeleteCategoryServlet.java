@@ -29,7 +29,7 @@ public class DeleteCategoryServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 	}
 
 	/**
@@ -39,11 +39,10 @@ public class DeleteCategoryServlet extends HttpServlet {
 		CategoryManager categoryManager = new CategoryManager();
 		int categoryId = Integer.parseInt(request.getParameter("categoryId"));
 		
-		// Delete category in db
 		
 		categoryManager.deleteById(categoryId);
 		
-		response.sendRedirect("AdminCategory.jsp");
+		response.sendRedirect("views/AdminCategory.jsp");
 		return;
 	}
 

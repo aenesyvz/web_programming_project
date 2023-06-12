@@ -9,7 +9,7 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/auth.css">
+	<link rel="stylesheet" href="../css/auth.css">
 
 </head>
 <body>
@@ -18,7 +18,7 @@
 			<div class="row justify-content-center">
 				<div class="col-md-12 col-lg-10">
 					<div class="wrap d-md-flex">
-						<div class="img" style="background-image: url(images/bg-1.jpg);">
+						<div class="img" style="background-image: url(../images/bg-1.jpg);">
 			      </div>
 						<div class="login-wrap p-4 p-md-5">
 			      	<div class="d-flex">
@@ -32,7 +32,7 @@
 									</p>
 								</div>
 			      	</div>
-					<form action="LoginServlet" method="post" class="signin-form">
+					<form action="../LoginServlet" method="post" class="signin-form">
 			      		<div class="form-group mb-3">
 			      			<label class="label" for="name">Username</label>
 			      			<input type="text" placeholder="Entrying..." id="username" class="form-control" name="username" required />

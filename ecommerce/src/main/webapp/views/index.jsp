@@ -32,12 +32,12 @@ if (categoryId == null || categoryId.trim().equals("all")) {
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-	<%@include file="components/navbar.jsp"%>
+	<%@include file="../components/navbar.jsp"%>
 	
-	 <section  class="w-100 p-0 mb-5 position-relative d-flex z-3 flex-column justify-content-center align-items-center" style="height: 60vh;background: url('images/order.png') center center;background-size: cover;">
+	 <section  class="w-100 p-0 mb-5 position-relative d-flex z-3 flex-column justify-content-center align-items-center" style="height: 60vh;background: url('../images/order.png') center center;background-size: cover;">
         <div class="container text-center text-md-left" data-aos="fade-up">
             <h1 class="title mb-3 font-weight-bold text-white">Benimle <span class="border-bottom border-info border-5 rounded">Tanış</span></h1>
             <h2 class="sub__title mb-5" style="color: rgba(255, 255, 255, 0.8)">Hayalindeki projeyi gerçeğe dönüştürmeden önce benim hakkımda fikir edin!</h2>
@@ -75,7 +75,7 @@ if (categoryId == null || categoryId.trim().equals("all")) {
 	         		 <div>
 					         		 
 					     <div class="position-relative">
-				            <img class="rounded img-fluid" src="img<%= product.getImage() %>" style="height: 220px; width: 100%;" alt="">
+				            <img class="rounded img-fluid" src="../img<%= product.getImage() %>" style="height: 220px; width: 100%;" alt="">
 				        </div>
 				
 				        <div class="px-3 py-3">
@@ -105,7 +105,7 @@ if (categoryId == null || categoryId.trim().equals("all")) {
     
     </section>
     
-	<%@include file="components/footer.jsp"%>
+	<%@include file="../components/footer.jsp"%>
 	
 	
 	

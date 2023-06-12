@@ -58,7 +58,7 @@ public class OrderServlet extends HttpServlet {
 		
 			
 		if(currentUser == null) {
-			response.sendRedirect("login.jsp");
+			response.sendRedirect("views/login.jsp");
 			return;
 		}
 			
@@ -92,7 +92,7 @@ public class OrderServlet extends HttpServlet {
 			order.setTotal(price);
 			orderManager.update(order);
 			
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("views/index.jsp");
 			return;
 			
 	}

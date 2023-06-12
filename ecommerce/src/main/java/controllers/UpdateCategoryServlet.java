@@ -46,13 +46,13 @@ public class UpdateCategoryServlet extends HttpServlet {
 		Category category = categoryManager.fetchById(categoryId);
 		
 		if(category == null) {			
-			response.sendRedirect("AdminCategory.jsp");
+			response.sendRedirect("views/AdminCategory.jsp");
 			return;
 		}
 		
 		category.setName(categoryName);				
 		categoryManager.update(category);
-		response.sendRedirect("AdminCategory.jsp");
+		response.sendRedirect("views/AdminCategory.jsp");
 		return;
 	}
 

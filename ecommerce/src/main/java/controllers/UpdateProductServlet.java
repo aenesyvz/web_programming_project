@@ -69,7 +69,7 @@ public class UpdateProductServlet extends HttpServlet {
 		Category category = categoryManager.fetchById(categoryId);
 		
 		if(category == null) {
-			response.sendRedirect("AdminProduct.jsp");
+			response.sendRedirect("views/AdminProduct.jsp");
 			return;
 		}
 		
@@ -88,7 +88,7 @@ public class UpdateProductServlet extends HttpServlet {
 		
 		productManager.update(updatedProduct);
 		
-		response.sendRedirect("AdminProduct.jsp");
+		response.sendRedirect("views/AdminProduct.jsp");
 		return;
 	}
 
@@ -119,7 +119,7 @@ public class UpdateProductServlet extends HttpServlet {
 	
 	private String uploadImage(HttpServletRequest request, Part productImagePart)
 			throws FileNotFoundException, IOException {		
-		String appPath = request.getRealPath("img");
+		String appPath = request.getRealPath("../img");
 		String uploadPath = File.separator + "product" + File.separator + java.util.UUID.randomUUID();
 		String fullPath = appPath + uploadPath;
 		

@@ -29,7 +29,7 @@ public class LogOutServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession httpSession = request.getSession();
 		httpSession.removeAttribute("current-user");
-		response.sendRedirect("login.jsp");	
+		response.sendRedirect("views/login.jsp");	
 	}
 
 	/**

@@ -13,12 +13,12 @@ List<Category> categories = categoryManager.fetchAll();
 <head>
 <meta charset="UTF-8">
 <title>Admin Category</title>
-
-<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-
+	<link rel="stylesheet" href="../css/auth.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/auth.css">
+	
 </head>
 <body>
 	<%@include file="../../components/navbar.jsp"%>
@@ -29,7 +29,7 @@ List<Category> categories = categoryManager.fetchAll();
 					Add Category
 				</button>
 				<button  type="button" class="btn btn-primary">
-				  Toplam Kategori Sayısı <span class="ml-2 badge badge-light"><%=categories.size()%></span>
+				  Toplam Kategori Sayısı <span class="ml-2 badge badge-dark"><%=categories.size()%></span>
 				</button>
 			</div>
 		</div>
@@ -83,7 +83,7 @@ List<Category> categories = categoryManager.fetchAll();
             </div>
             <!--end::Close-->
         </div>
-		<form action="AddedCategoryServlet" method="post" class="signin-form">
+		<form action="../AddedCategoryServlet" method="post" class="signin-form">
 	        <div class="modal-body">
 	            <div class="form-group mb-3">
 				      			<label class="label" for="name">Category Name</label>
@@ -110,7 +110,7 @@ List<Category> categories = categoryManager.fetchAll();
                 <h3 class="modal-title">Update Category</h3>
                 <!-- ... -->
             </div>
-            <form action="UpdateCategoryServlet" method="post" class="signin-form">
+            <form action="../UpdateCategoryServlet" method="post" class="signin-form">
                 <div class="modal-body">
                     <div class="form-group mb-3">
                         <input type="hidden" id="UcategoryId" class="form-control" name="categoryId" readonly />
@@ -141,7 +141,7 @@ List<Category> categories = categoryManager.fetchAll();
                 <!-- ... -->
             </div>
              <p id="deleteMessage" class="text-center"></p>
-            <form action="DeleteCategoryServlet" method="post" class="signin-form">
+            <form action="../DeleteCategoryServlet" method="post" class="signin-form">
                 <div class="modal-body">
                     <div class="form-group mb-3">
                         <input type="hidden" id="DcategoryId" class="form-control" name="categoryId" readonly />

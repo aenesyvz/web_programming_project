@@ -53,7 +53,7 @@ public class AddCartServlet extends HttpServlet {
 		
 		
 		if(currentUser == null || currentUser.getId() < 0) {
-			response.sendRedirect("login.jsp");
+			response.sendRedirect("views/login.jsp");
 			return;
 		}
 		
@@ -84,7 +84,7 @@ public class AddCartServlet extends HttpServlet {
 			currentCartItem.setQuantity(totalQuantity);
 			cartItemManager.update(currentCartItem);
 			
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("views/index.jsp");
 			return;	
 		} else {
 			if(quantity > product.getStock()) {
@@ -93,7 +93,7 @@ public class AddCartServlet extends HttpServlet {
 			CartItem cartItem = new CartItem(currentUser, product, quantity);
 			cartItemManager.save(cartItem);
 			
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("views/index.jsp");
 			return;	
 		}			
 	}

@@ -45,7 +45,7 @@ public class RegisterServlet extends HttpServlet {
 		
 		if(username.isEmpty() || password.isEmpty()) {
 		
-			response.sendRedirect("register.jsp");
+			response.sendRedirect("views/register.jsp");
 			return;
 		}
 		
@@ -56,10 +56,10 @@ public class RegisterServlet extends HttpServlet {
 		if(userId > -1) {
 			User savedUser = userManager.getByUsernameAndPassword(username, password);
 			httpSession.setAttribute("current-user", savedUser);				
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("views/index.jsp");
 			return;
 		} else {	
-			response.sendRedirect("register.jsp");
+			response.sendRedirect("views/register.jsp");
 			return;
 		}
 		

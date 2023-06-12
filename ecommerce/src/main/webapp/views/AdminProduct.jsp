@@ -18,10 +18,10 @@ List<Product> products = productManager.fetchAll();
 <title>Admin Product</title>
 
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-
+	<link rel="stylesheet" href="../css/auth.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/auth.css">
+	
 </head>
 
 <body>
@@ -33,7 +33,7 @@ List<Product> products = productManager.fetchAll();
 					Add Product
 				</button>
 				<button  type="button" class="btn btn-primary">
-				  Total Product Count <span class="ml-2 badge badge-light"><%=products.size()%></span>
+				  Total Product Count <span class="ml-2 badge badge-dark"><%=products.size()%></span>
 				</button>
 			</div>
 		</div>
@@ -62,7 +62,7 @@ List<Product> products = productManager.fetchAll();
 		      <th scope="row"><%=i + 1%></th>
 		     <td><%=products.get(i).getId()%></td>
 		      <td><img
-								src="img<%=products.get(i).getImage()%>" width="200px"
+								src="../img<%=products.get(i).getImage()%>" width="200px"
 								height="200px"></td>
 		     <td ><%=products.get(i).getName()%></td>
 		      <td ><%=products.get(i).getCategory().getName()%></td>
@@ -104,7 +104,7 @@ List<Product> products = productManager.fetchAll();
             </div>
             <!--end::Close-->
         </div>
-		<form action="AddProductServlet" method="post" class="signin-form" enctype="multipart/form-data">
+		<form action="../AddProductServlet" method="post" class="signin-form" enctype="multipart/form-data">
 	        <div class="modal-body">
 	            <div class="form-group mb-3">
 				      			<label class="label" for="name">Product Name</label>
@@ -155,7 +155,7 @@ List<Product> products = productManager.fetchAll();
                 <h3 class="modal-title">Update Product</h3>
                 <!-- ... -->
             </div>
-            <form action="UpdateProductServlet" method="post" class="signin-form" enctype="multipart/form-data">
+            <form action="../UpdateProductServlet" method="post" class="signin-form" enctype="multipart/form-data">
                 <div class="modal-body">
                 <div class="form-group mb-3">
                         <input type="hidden" id="UproductId" class="form-control" name="productId" readonly />
@@ -213,7 +213,7 @@ List<Product> products = productManager.fetchAll();
                 <!-- ... -->
             </div>
              <p id="deleteMessage" class="text-center"></p>
-            <form action="DeleteProductServlet" method="post" class="signin-form">
+            <form action="../DeleteProductServlet" method="post" class="signin-form">
                 <div class="modal-body">
                     <div class="form-group mb-3">
                         <input type="hidden" id="DproductId" class="form-control" name="productId" readonly />

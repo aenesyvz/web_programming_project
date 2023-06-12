@@ -46,7 +46,7 @@ double total = 0;
 		    <tr>
 		      <th scope="row"><%=i + 1%></th>
 		      <td><img
-								src="img<%=cartItems.get(i).getProduct().getImage()%>" width="200px"
+								src="../img<%=cartItems.get(i).getProduct().getImage()%>" width="200px"
 								height="200px"></td>
 		     <td ><%=cartItems.get(i).getProduct().getName()%></td>
 		      <td ><%=cartItems.get(i).getProduct().getPrice()%></td>
@@ -93,7 +93,7 @@ double total = 0;
                                 </div>
 
                                 <div class="container text-center my-3">
-                                	<input class="btn btn-outline-success" value="Confirm Order" type="button" onclick="window.location = 'views/ConfirmOrder.jsp'"> 
+                                	<input class="btn btn-outline-success" value="Confirm Order" type="button" onclick="window.location = 'ConfirmOrder.jsp'"> 
                                 	<input class="btn btn-outline-primary" value="Continue Shopping" type="button" onclick="window.location = 'index.jsp'">                               	                          		
                                 </div>
 
@@ -116,7 +116,7 @@ double total = 0;
                 <!-- ... -->
             </div>
              <p id="deleteMessage" class="text-center"></p>
-            <form action="DeleteCartItemServlet" method="post" class="signin-form">
+            <form action="../DeleteCartItemServlet" method="post" class="signin-form">
                 <div class="modal-body">
                 <div class="form-group mb-3">
                        <input type="hidden" id="DcartItemId" name="cartItemId" readonly >

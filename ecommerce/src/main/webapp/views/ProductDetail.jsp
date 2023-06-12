@@ -24,7 +24,7 @@ Product product = productDao.fetchById(id);
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/auth.css">
+	<link rel="stylesheet" href="../css/auth.css">
 
 </head>
 <body>
@@ -33,7 +33,7 @@ Product product = productDao.fetchById(id);
 			<div class="row justify-content-between">
 				<div class=" d-flex wrap d-md-flex p-0 m-0"  style="background-color:  #fff">
 					<div class="col-md-6 d-md-flex">
-					<img class="img-fluid " src='img<%= product.getImage() %>'/>
+					<img class="img-fluid " src='../img<%= product.getImage() %>'/>
 			      </div>
 						<div class="login-wrap p-4 p-md-5 col-md-6" style="background-color:  #fff">
 			      	<div class="d-flex">
@@ -47,7 +47,7 @@ Product product = productDao.fetchById(id);
 									</p>
 								</div>
 			      	</div>
-					<form action="AddCartServlet" method="post" class="signin-form">
+					<form action="../AddCartServlet" method="post" class="signin-form">
 					<input type="hidden" name="productId" value="<%=product.getId()%>">
 			      		<div class="form-group mb-3">
 			      			<h4 class="label">Product Name</h4>

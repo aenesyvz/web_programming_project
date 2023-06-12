@@ -42,19 +42,14 @@ public class AddedCategoryServlet extends HttpServlet {
 		
 		String categoryName = request.getParameter("categoryName");
 		if(categoryName.isEmpty()) {
-			response.sendRedirect("AdminCategory.jsp");
+			response.sendRedirect("views/AdminCategory.jsp");
 			return;
 		}
-		
-		// Create category to db
-		
+				
 		Category category = new Category(categoryName);
-		int result = categoryManager.save(category);
-		
-		// Redirect
-		
-						
-		response.sendRedirect("AdminCategory.jsp");
+		categoryManager.save(category);
+			
+		response.sendRedirect("views/AdminCategory.jsp");
 		return;
 		
 	}

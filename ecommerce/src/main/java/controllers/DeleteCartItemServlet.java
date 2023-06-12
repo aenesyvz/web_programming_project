@@ -46,13 +46,13 @@ public class DeleteCartItemServlet extends HttpServlet {
 		User currentUser = (User)session.getAttribute("current-user");
 		
 		if(currentUser == null || currentUser.getId() < 0) {
-			response.sendRedirect("login.jsp");
+			response.sendRedirect("views/login.jsp");
 			return;
 		}
 		
 		int cartItemId = Integer.parseInt(request.getParameter("cartItemId"));
 		cartItemManager.deleteById(cartItemId);
-		response.sendRedirect("Cart.jsp");
+		response.sendRedirect("views/Cart.jsp");
 	}
 
 }
