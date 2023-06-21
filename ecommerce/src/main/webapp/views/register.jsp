@@ -18,7 +18,7 @@
 			<div class="row justify-content-center">
 				<div class="col-md-12 col-lg-10">
 					<div class="wrap d-md-flex">
-						<div class="img" style="background-image: url(../images/bg-1.jpg);">
+						<div class="img" style="background-image: url(../images/rlima.jpg);">
 			      </div>
 						<div class="login-wrap p-4 p-md-5">
 			      	<div class="d-flex">
@@ -32,7 +32,7 @@
 									</p>
 								</div>
 			      	</div>
-					<form action="RegisterServlet" method="post" class="signin-form">
+					<form action="../RegisterServlet" method="post" class="signin-form">
 			      		<div class="form-group mb-3">
 			      			<label class="label" for="name">Username</label>
 			      			<input type="text" placeholder="Entrying..." id="username" class="form-control" name="username" required />

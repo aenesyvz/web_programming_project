@@ -37,10 +37,10 @@ if (categoryId == null || categoryId.trim().equals("all")) {
 <body>
 	<%@include file="../components/navbar.jsp"%>
 	
-	 <section  class="w-100 p-0 mb-5 position-relative d-flex z-3 flex-column justify-content-center align-items-center" style="height: 60vh;background: url('../images/order.png') center center;background-size: cover;">
+	 <section  class="w-100 p-0 mb-5 position-relative d-flex z-3 flex-column justify-content-center align-items-center" style="height: 60vh;background: url('../images/rlima.jpg') center center;background-size: cover;">
         <div class="container text-center text-md-left" data-aos="fade-up">
-            <h1 class="title mb-3 font-weight-bold text-white">Benimle <span class="border-bottom border-info border-5 rounded">Tanış</span></h1>
-            <h2 class="sub__title mb-5" style="color: rgba(255, 255, 255, 0.8)">Hayalindeki projeyi gerçeğe dönüştürmeden önce benim hakkımda fikir edin!</h2>
+            <h1 class="title mb-3 font-weight-bold text-white">Güvenilir Alışverişin Yeni Adresi!</h1>
+         
         </div>
     </section>
     
@@ -48,7 +48,7 @@ if (categoryId == null || categoryId.trim().equals("all")) {
      <section id="aboutSection" class="my-5 py-5 bg-white">
         <div class="container px-5">
             <div class="row justify-content-center">
-                <h2 class="text-center section__title">Ürünler</h2>
+                <h2 class="text-center section__title">Products</h2>
                 <div class="col-md-12 w-25 border-bottom border-2 border-success section__border "></div>
             </div>
             <div class="container mt-3 pt-3">

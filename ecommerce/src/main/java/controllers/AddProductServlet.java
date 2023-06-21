@@ -107,7 +107,7 @@ public class AddProductServlet extends HttpServlet {
 	
 	private String uploadImage(HttpServletRequest request, Part productImagePart)
 			throws FileNotFoundException, IOException {		
-		String appPath = request.getRealPath("../img");
+		String appPath = request.getRealPath("/img");
 		String uploadPath = File.separator + "product" + File.separator + java.util.UUID.randomUUID();
 		String fullPath = appPath + uploadPath;
 		

@@ -93,8 +93,8 @@ double total = 0;
                                 </div>
 
                                 <div class="container text-center my-3">
-                                	<input class="btn btn-outline-success" value="Confirm Order" type="button" onclick="window.location = 'ConfirmOrder.jsp'"> 
-                                	<input class="btn btn-outline-primary" value="Continue Shopping" type="button" onclick="window.location = 'index.jsp'">                               	                          		
+                                	<input class="btn btn-outline-success" value="Alıiverişi Tamamla" type="button" onclick="window.location = 'ConfirmOrder.jsp'"> 
+                                	<input class="btn btn-outline-primary" value="Alışverişe Devam  Et" type="button" onclick="window.location = 'index.jsp'">                               	                          		
                                 </div>
 
                             </form>    

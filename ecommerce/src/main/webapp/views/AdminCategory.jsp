@@ -182,7 +182,7 @@ List<Category> categories = categoryManager.fetchAll();
 		    // İlgili input alanlarının değerlerini güncelle
 		    $('#DcategoryId').val(id);
 		    $('#DcategoryName').val(name);
-		    $('#deleteMessage').text(name + "kategorisini silmek istediğinize emin misiniz ? ");
+		    $('#deleteMessage').text(name + " kategorisini silmek istediğinize emin misiniz ? ");
 		   
 		}
 

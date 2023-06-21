@@ -256,7 +256,7 @@ List<Product> products = productManager.fetchAll();
 		    // İlgili input alanlarının değerlerini güncelle
 		    $('#DproductId').val(id);
 		    $('#DproductName').val(name);
-		    $('#deleteMessage').text(name + "ürününü silmek istediğinize emin misiniz ? ");
+		    $('#deleteMessage').text(name + " ürününü silmek istediğinize emin misiniz ? ");
 		   
 		}
 
